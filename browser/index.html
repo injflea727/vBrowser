@@ -1406,13 +1406,10 @@
       function timesUp () {
         sessionTimeout = true;
         if (bugHunterActive) return; // display time's up message after closing bug hunter
-        $('#times-up').fadeIn();
       }
 
       function disconnect () {
           if ($('#idle-timeout').is(':visible')) return;
-          if ($('#times-up').is(':visible')) return;
-          if ($('#limit-reached').is(':visible')) return;
           if (bugHunterActive) {
             // if we disconnect and bug hunter is active,
             // display the disconnected message only after bug hunter has been closed
